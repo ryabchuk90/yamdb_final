@@ -75,7 +75,7 @@ def send_confirmation_code(request):
             )
 
         return Response(
-            {'message': f'Here was an error while sending confirmation email.'},
+            {'message': 'Here was an error while sending confirmation email.'},
             status=status.HTTP_200_OK
         )
 
