@@ -21,7 +21,7 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake8 --max-line-length = 99
+          flake8 --max-line-length 99
           flake8 --exclude tests,api_yamdb,api/migrations
           flake8 .
 
