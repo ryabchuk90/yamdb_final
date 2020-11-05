@@ -52,10 +52,11 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull ryabant/flask-app
+            sudo docker pull ryabant/yamdb
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 ryabant/flask-app
+            sudo docker run --rm -d -p 5000:5000 ryabant/yamdb
 
   send_message:
     runs-on: ubuntu-latest
