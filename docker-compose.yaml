@@ -12,7 +12,6 @@ services:
       - ./.env
   web:
     image: ryabant/yamdb:v1.0
-    command: bash -c "python manage.py collectstatic --noinput && python manage.py migrate --noinput && gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
     restart: always
     expose:
       - 8000
@@ -21,7 +20,7 @@ services:
     env_file:
       - ./.env
   nginx:
-    image: nginx:latest
+    image: nginx:1.19.3
     restart: always
     volumes:
       - ./static:/code/static
