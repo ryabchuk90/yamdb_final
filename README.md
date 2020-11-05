@@ -33,3 +33,5 @@ docker-compose run web python manage.py loaddata fixtures.json
 - [Django](https://www.djangoproject.com/)
 - [Postgresql](https://www.postgresql.org/)
 - [Docker](https://www.docker.com/)
+
+![api_yamdb_workflow](https://github.com/ryabchuk90/yamdb_final/workflows/api_yamdb_workflow/badge.svg)
