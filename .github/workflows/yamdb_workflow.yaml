@@ -24,7 +24,7 @@ jobs:
           flake8 --exclude tests,api_yamdb,api/migrations --max-line-length 99
 
       - name: Test with pytest
-        run: pytest tests.py
+        run: pytest tests
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
