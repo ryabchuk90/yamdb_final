@@ -26,8 +26,6 @@ services:
     volumes:
       - ./static:/code/static
       - ./nginx/:/etc/nginx/conf.d
-    expose:
-      - 80
     ports:
       - 80:80
     depends_on:
